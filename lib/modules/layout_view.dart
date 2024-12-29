@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:islami/core/constants/app_assets.dart';
 import 'package:islami/core/theme/app_color.dart';
+import 'package:islami/modules/hadith/Hadith_view.dart';
+import 'package:islami/modules/quran/quran_view.dart';
+import 'package:islami/modules/radio/radio_view.dart';
+import 'package:islami/modules/sibha/sibha_view.dart';
+import 'package:islami/modules/time/time_view.dart';
+import 'package:islami/modules/widget/customnavBar.dart';
 
 class LayoutView extends StatefulWidget {
   static const String routeName = '/LayoutView';
@@ -13,9 +20,21 @@ class LayoutView extends StatefulWidget {
 class _LayoutViewState extends State<LayoutView> {
   int selectedIndex = 0;
 
+  List<Widget> screens =[
+    QuranView(),
+    HadithView(),
+    SibhaView(),
+    RadioView(),
+    TimeView()
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
+
+      body: screens[selectedIndex],
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
         onTap: (index) {
@@ -23,48 +42,44 @@ class _LayoutViewState extends State<LayoutView> {
             selectedIndex = index;
           });
         },
+
         backgroundColor: AppColor.PrimaryColor,
         type: BottomNavigationBarType.fixed,
+
         selectedIconTheme: const IconThemeData(
           color: Colors.white,
         ),
+
         unselectedIconTheme: const IconThemeData(
           color: Colors.grey,
         ),
+
+
         selectedItemColor: AppColor.white,
         unselectedItemColor: AppColor.SecondryColor,
-        showSelectedLabels: false,
+        showSelectedLabels: true,
+        showUnselectedLabels: false,
+
         items: [
           BottomNavigationBarItem(
-            icon: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: AppColor.SecondryColor.withOpacity(0.6), // Fixed opacity
-              ),
-              child: Image.asset(
-                'assets/images/qur.png',
-                height: 24, // Add size constraints
-                width: 24,
-              ),
-            ),
+            icon: CustomNavBar(imagePath: AppAssets.quranIcon,isSelected: selectedIndex == 0,),
+            label: 'Quran',
+          ),
+           BottomNavigationBarItem(
+            icon: CustomNavBar(imagePath: AppAssets.HadithIcon,isSelected: selectedIndex == 1,),
             label: 'Hadith',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+           BottomNavigationBarItem(
+            icon: CustomNavBar(imagePath: AppAssets.TasbihIcon,isSelected: selectedIndex == 2,),
             label: 'Sibha',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.mosque),
-            label: 'Radia',
+           BottomNavigationBarItem(
+            icon: CustomNavBar(imagePath: AppAssets.RadioIcon,isSelected: selectedIndex == 3,),
+            label: 'Radio',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.star),
+           BottomNavigationBarItem(
+            icon: CustomNavBar(imagePath: AppAssets.TimeIcon,isSelected: selectedIndex == 4,),
             label: 'Time',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
           ),
         ],
       ),
