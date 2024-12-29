@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:islami/modules/layout_view.dart';
 
+import '../onboarding_screen/onboarding_screen.dart';
+
 class SplashScreen extends StatefulWidget {
   static const String routeName = 'SplashScreen';
 
@@ -17,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     Timer(const Duration(seconds: 2), () {
-      Navigator.of(context).pushNamed(LayoutView.RouteName);
+      Navigator.of(context).pushNamed(OnboardingScreen.routeName);
     });
     super.initState();
   }

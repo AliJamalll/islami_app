@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:islami/modules/layout_view.dart';
 import 'package:islami/splash/splash_screen.dart';
 
+import 'onboarding_screen/onboarding_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -21,7 +23,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         SplashScreen.routeName: (context) => const SplashScreen(),
-        LayoutView.RouteName: (context) => const LayoutView(),
+        OnboardingScreen.routeName : (context) => const OnboardingScreen(),
+        LayoutView.routeName: (context) => const LayoutView(),
       },
       initialRoute: SplashScreen.routeName,
     );

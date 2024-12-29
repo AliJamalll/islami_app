@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/core/theme/app_color.dart';
 
 class LayoutView extends StatefulWidget {
-  static const String RouteName = 'LayoutView';
+  static const String routeName = '/LayoutView';
 
   const LayoutView({super.key});
 
