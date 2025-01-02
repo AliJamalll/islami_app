@@ -21,4 +21,9 @@ class AppAssets{
   static const String tasbihScreen = '${_basePath}sibha screen.png';
   static const String radioScreen = '${_basePath}radio screen.png';
   static const String timeScreen = '${_basePath}time screen.png';
+
+  //
+ // static const String quranScreenItem = '${_basePath}Logo_quran_view.png';
+  static const String numberIcon = '${_basePath}number icon.png';
+
 }

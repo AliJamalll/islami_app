@@ -46,12 +46,18 @@ class _LayoutViewState extends State<LayoutView> {
         backgroundColor: AppColor.PrimaryColor,
         type: BottomNavigationBarType.fixed,
 
+        selectedLabelStyle: TextStyle(
+          fontSize: 12,
+          fontFamily: 'janna',
+          fontWeight: FontWeight.bold
+        ),
+
         selectedIconTheme: const IconThemeData(
           color: Colors.white,
         ),
 
         unselectedIconTheme: const IconThemeData(
-          color: Colors.grey,
+          color: Colors.black,
         ),
 
 
@@ -62,7 +68,7 @@ class _LayoutViewState extends State<LayoutView> {
 
         items: [
           BottomNavigationBarItem(
-            icon: CustomNavBar(imagePath: AppAssets.quranIcon,isSelected: selectedIndex == 0,),
+            icon: CustomNavBar(imagePath: "assets/images/qur.png",isSelected: selectedIndex == 0,),
             label: 'Quran',
           ),
            BottomNavigationBarItem(
