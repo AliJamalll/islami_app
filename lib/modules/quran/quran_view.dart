@@ -224,8 +224,10 @@ class QuranView extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 20),
                   scrollDirection: Axis.vertical,
                     itemBuilder: (context,index) => GestureDetector(
-                        onTap: () => Navigator.pushNamed(context,QuranDetailsView.routeName,
-                            arguments: recentDataList[index]),
+                        onTap: () => Navigator.pushNamed(
+                            context,QuranDetailsView.routeName,
+                            arguments: recentDataList[index]
+                        ),
                         child: SuraItemWidget(suraDataModel: recentDataList[index],)),
                     separatorBuilder: (context,index) => const Divider(
                       endIndent: 50,

@@ -26,4 +26,12 @@ class AppAssets{
  // static const String quranScreenItem = '${_basePath}Logo_quran_view.png';
   static const String numberIcon = '${_basePath}number icon.png';
 
+  //hadith_screen
+  static const String corner1 = '${_basePath}Cornerr 1.png';
+  static const String corner2 = '${_basePath}Cornerr 2.png';
+  static const String quranWallpaper = '${_basePath}HadithCardBackGround 1.png';
+  static const String mosqueDown = '${_basePath}Mosque-02 2.png';
+  static const String mosqueDown2 = '${_basePath}downmosqu2.png';
+
+
 }
