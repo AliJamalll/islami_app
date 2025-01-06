@@ -38,23 +38,30 @@ class _HadithDetailsViewState extends State<HadithDetailsView> {
       ),
       body: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Image(image:AssetImage(AppAssets.corner2,),color:AppColor.PrimaryColor,),
-              Image(image:AssetImage(AppAssets.corner1),color:AppColor.PrimaryColor,)
-            ],
-          ),
-          Text(
-            hadithContent,
-            style :TextStyle(
-                fontFamily: 'janna',
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: AppColor.PrimaryColor
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Image(image:AssetImage(AppAssets.corner2,),color:AppColor.PrimaryColor,),
+                Image(image:AssetImage(AppAssets.corner1),color:AppColor.PrimaryColor,)
+              ],
             ),
-            textAlign: TextAlign.center,
           ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Text(
+              hadithContent,
+              style :TextStyle(
+                  fontFamily: 'janna',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: AppColor.PrimaryColor
+              ),
+              textAlign: TextAlign.justify,
+            ),
+          ),
+
           Spacer(),
         Image(image: AssetImage(AppAssets.mosqueDown2))
         ],

@@ -34,4 +34,8 @@ class AppAssets{
   static const String mosqueDown2 = '${_basePath}downmosqu2.png';
 
 
+  static const String firstPartSibha = '${_basePath}first part sibha.png';
+  static const String secondPartSibha = '${_basePath}second part sibha.png';
+
+
 }

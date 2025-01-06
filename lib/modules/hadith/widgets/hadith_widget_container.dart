@@ -20,7 +20,7 @@ class _HadithWidgetContainerState extends State<HadithWidgetContainer> {
   @override
   void initState() {
     super.initState();
-    loadHadeethDetails(widget.hadithModel.id); // Load the Hadith data on initialization
+    loadHadeethDetails(widget.hadithModel.id);
   }
 
   @override
@@ -42,8 +42,12 @@ class _HadithWidgetContainerState extends State<HadithWidgetContainer> {
           ),
           Positioned(
             bottom: 70,
-            left: 40,
+            left: 30,
             child: Image(image: AssetImage(AppAssets.quranWallpaper)),
+          ),
+          Positioned(
+            bottom: 1,
+            child: Image(image: AssetImage(AppAssets.mosqueDown)),
           ),
           Positioned(
             top: 50,
@@ -74,10 +78,7 @@ class _HadithWidgetContainerState extends State<HadithWidgetContainer> {
               ),
             ),
           ),
-          Positioned(
-            bottom: 1,
-            child: Image(image: AssetImage(AppAssets.mosqueDown)),
-          ),
+
         ],
       ),
     );
