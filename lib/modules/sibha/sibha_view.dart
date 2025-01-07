@@ -14,10 +14,10 @@ class SibhaView extends StatefulWidget {
 
 class _SibhaViewState extends State<SibhaView> {
    int counter = 0;
-   double angle = 0.5;
+   double angle = 0.9;
   void rotateImage(){
     setState(() {
-      angle += 0.5;
+      angle += 0.9;
       counter++;
     });
   }

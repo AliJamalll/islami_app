@@ -37,5 +37,9 @@ class AppAssets{
   static const String firstPartSibha = '${_basePath}first part sibha.png';
   static const String secondPartSibha = '${_basePath}second part sibha.png';
 
+  static const String radioContainer1 = '${_basePath}radio 1.png';
+  static const String radioContainer2 = '${_basePath}radio2.png';
+
+
 
 }
